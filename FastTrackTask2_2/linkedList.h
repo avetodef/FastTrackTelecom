@@ -18,7 +18,7 @@ class linkedList {
 private:
     node<T> head;
 public:
-    explicit linkedList(const node<T> &head);
+    explicit linkedList(T data);
 
     void insertElement(T param); //inserts in the front of linkedlist
     bool deleteElement(T param);

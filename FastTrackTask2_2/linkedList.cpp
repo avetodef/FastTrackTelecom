@@ -14,7 +14,7 @@ void linkedList<T>::insertElement(T param){
 template <class T>
 bool linkedList<T>::deleteElement(T param){
     node<T>* prev = &this->head;
-    node<T>* current = prev->next;
+    node<T>* current = prev;
     while(current != nullptr){
         if(current->data == param){
             prev->next = current->next;
@@ -31,20 +31,19 @@ bool linkedList<T>::deleteElement(T param){
 template <class T>
 int linkedList<T>::findElement(T param){
     int cnt = 0;
-    node<T>* current = this->head.next;
-    while(current != nullptr){
-
+    node<T>* current = &this->head;
+    while(current->next != nullptr){
         if(current->data == param){
             return cnt;
         }
         current = current->next;
         cnt += 1;
     }
-    return T();
+    return -1;
 }
 
 template<class T>
-linkedList<T>::linkedList(const node<T> &head):head(head) {}
+linkedList<T>::linkedList(T data) : head(::node<T>(nullptr, data)) {}
 
 template<class T>
 void linkedList<T>::print(){
@@ -55,4 +54,6 @@ void linkedList<T>::print(){
     }
 }
 
+
 template class linkedList<int>;
+template class linkedList<double>;

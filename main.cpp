@@ -5,7 +5,7 @@
 #include <iostream>
 
 int main(){
-    linkedList<int> myLinkedList = linkedList(::node<int>(nullptr, 0));
+    linkedList<int> myLinkedList = linkedList(0);
 
     myLinkedList.insertElement(1);
     myLinkedList.insertElement(2);
