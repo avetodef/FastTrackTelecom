@@ -1,5 +1,5 @@
 //
-// Created by Софья on 20.04.2024.
+// Created by Sofia on 20.04.2024.
 //
 
 #ifndef FASTTRACKTELECOM_LINKEDLIST_H
@@ -18,11 +18,12 @@ class linkedList {
 private:
     node<T> head;
 public:
+    explicit linkedList(const node<T> &head);
+
     void insertElement(T param); //inserts in the front of linkedlist
     bool deleteElement(T param);
-    T findElement(T param);
+    int findElement(T param); //returns index
+    void print();
 };
-
-
 
 #endif //FASTTRACKTELECOM_LINKEDLIST_H

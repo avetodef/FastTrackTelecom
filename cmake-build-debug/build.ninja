@@ -49,23 +49,17 @@ cmake_ninja_workdir = D$:/FastTrackTelecom/cmake-build-debug/
 
 build cmake_object_order_depends_target_FastTrackTelecom: phony || CMakeFiles/FastTrackTelecom.dir
 
-build CMakeFiles/FastTrackTelecom.dir/main.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/main.cpp || cmake_object_order_depends_target_FastTrackTelecom
-  DEP_FILE = CMakeFiles\FastTrackTelecom.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++20
-  OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
-  OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir
-
 build CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/linkedList.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/FastTrackTask2_2/linkedList.cpp || cmake_object_order_depends_target_FastTrackTelecom
   DEP_FILE = CMakeFiles\FastTrackTelecom.dir\FastTrackTask2_2\linkedList.cpp.obj.d
   FLAGS = -g -std=gnu++20
   OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
   OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir\FastTrackTask2_2
 
-build CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/node.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/FastTrackTask2_2/node.cpp || cmake_object_order_depends_target_FastTrackTelecom
-  DEP_FILE = CMakeFiles\FastTrackTelecom.dir\FastTrackTask2_2\node.cpp.obj.d
+build CMakeFiles/FastTrackTelecom.dir/main.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/main.cpp || cmake_object_order_depends_target_FastTrackTelecom
+  DEP_FILE = CMakeFiles\FastTrackTelecom.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20
   OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
-  OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir\FastTrackTask2_2
+  OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir
 
 
 # =============================================================================
@@ -75,7 +69,7 @@ build CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/node.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable FastTrackTelecom.exe
 
-build FastTrackTelecom.exe: CXX_EXECUTABLE_LINKER__FastTrackTelecom_Debug CMakeFiles/FastTrackTelecom.dir/main.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/linkedList.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/node.cpp.obj
+build FastTrackTelecom.exe: CXX_EXECUTABLE_LINKER__FastTrackTelecom_Debug CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/linkedList.cpp.obj CMakeFiles/FastTrackTelecom.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
