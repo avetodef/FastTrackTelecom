@@ -9,6 +9,7 @@ template <class T>
 class node{
 public:
     node(node *next, T data) : next(next), data(data) {}
+    node() = default;
     node * next;
     T data;
 };
@@ -18,7 +19,7 @@ class linkedList {
 private:
     node<T> head;
 public:
-    explicit linkedList(T data);
+    explicit linkedList() = default;
 
     void insertElement(T param); //inserts in the front of linkedlist
     bool deleteElement(T param);

@@ -7,16 +7,17 @@
 
 template <class T>
 void linkedList<T>::insertElement(T param){
-    node<T>* newElement = new node<T>(this->head.next, param);
+    auto* newElement = new node<T>(this->head.next, param);
     this->head.next = newElement;
 }
 
 template <class T>
 bool linkedList<T>::deleteElement(T param){
     node<T>* prev = &this->head;
-    node<T>* current = prev;
+    node<T>* current = prev->next;
     while(current != nullptr){
         if(current->data == param){
+            std::cout <<"element to delete found" << std::endl;
             prev->next = current->next;
             delete current;
             return true;
@@ -24,6 +25,7 @@ bool linkedList<T>::deleteElement(T param){
         prev = current;
         current = current->next;
     }
+    std::cout << "no such element" << std::endl;
     return false;
 }
 
@@ -43,15 +45,13 @@ int linkedList<T>::findElement(T param){
 }
 
 template<class T>
-linkedList<T>::linkedList(T data) : head(::node<T>(nullptr, data)) {}
-
-template<class T>
 void linkedList<T>::print(){
     node<T>* current = this->head.next;
     while(current != nullptr){
-        std::cout << current->data << std::endl;
+        std::cout << current->data << " ";
         current = current->next;
     }
+    std::cout << std::endl;
 }
 
 
