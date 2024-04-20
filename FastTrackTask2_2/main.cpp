@@ -1,7 +1,7 @@
 //
 // Created by Софья on 20.04.2024.
 //
-#include "FastTrackTask2_2/linkedList.h"|
+#include "linkedList.h"|
 #include <iostream>
 
 int main(){
