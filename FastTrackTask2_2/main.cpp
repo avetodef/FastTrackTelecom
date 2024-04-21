@@ -1,7 +1,8 @@
 //
 // Created by Софья on 20.04.2024.
 //
-#include "linkedList.h"|
+
+#include "linkedList.cpp"|
 #include <iostream>
 
 int main(){

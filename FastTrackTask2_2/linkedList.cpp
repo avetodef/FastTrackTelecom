@@ -53,7 +53,3 @@ void linkedList<T>::print(){
     }
     std::cout << std::endl;
 }
-
-
-template class linkedList<int>;
-template class linkedList<double>;
