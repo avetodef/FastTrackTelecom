@@ -5,7 +5,7 @@
 #include "linkedList.cpp"|
 #include <iostream>
 
-int main(){
+int task2_2_main(){
     linkedList<int> myLinkedList{};
     for (int i = 0; i < 10; i++){
         myLinkedList.insertElement(i);
