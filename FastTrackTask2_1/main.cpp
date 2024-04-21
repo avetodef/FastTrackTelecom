@@ -79,7 +79,14 @@ Token ParseName(const std::string& input, size_t& pos){
     if (auto it = kWord2Token.find(name); it != kWord2Token.end()) {
         return  it->second ;
     }
+    if (name.empty()){ //if non alhpa (ex. ;:) increment pos and add to name
+        ++pos;
+        name+=symbol;
+    }
 
+    if(pos == input.size()-1){ //if last symbol is not a token increment pos to end the parsing process
+        ++pos;
+    }
     return UnknownToken{name};
 }
 
@@ -106,18 +113,21 @@ std::vector<Token> Tokenize(const std::string& input) {
         if (std::isspace(symbol)) {
             ++pos;
         } else if (std::isdigit(symbol)) {
-            tokens.emplace_back(ParseNumber(input, pos));
+            tokens.emplace_back(ParseNumber(input, pos)); //pos is incremented in function
         } else if (auto it = kSymbol2Token.find(symbol); it != kSymbol2Token.end()) {
             tokens.emplace_back(it->second);
             ++pos;
         } else if (std::isalpha(symbol)){
-            tokens.emplace_back(ParseName(input, pos));
+            tokens.emplace_back(ParseName(input, pos)); //pos is incremented in function
         }
-
+        else{
+            tokens.emplace_back(ParseName(input, pos)); //if input is not a letter,pos is incremented in function
+        }
     }
     return tokens;
 }
 
+//to print in a pretty way
 void PrintToken(const Token& token) {
     std::visit([](const auto& t) {
         using T = std::decay_t<decltype(t)>;
@@ -150,7 +160,7 @@ void PrintToken(const Token& token) {
         }
     }, token);
 }
-
+//to print in a pretty way
 void PrintTokens(const std::vector<Token>& tokens) {
     for (const auto& token : tokens) {
         PrintToken(token);
@@ -160,7 +170,8 @@ void PrintTokens(const std::vector<Token>& tokens) {
 }
 
 int main(){
-    std::string input = "(1 + 2) * 3 / 4 + 5 * (6 - 7) * sqrt(25) - abs(12-3)";
+    //testing with nonsensical input along with normal input
+    std::string input = "(1 + 2) * 3 / 4 + 5 * (6 - 7) * sqrt(25) - abs(12-3) % 3 + min(1;aaaa;;;1) absabsdafe";
     std::cout <<"input string: " << input << std::endl;
     std::vector<Token> tokens = Tokenize(input);
     std::cout << "tokenizing done" << std::endl;
