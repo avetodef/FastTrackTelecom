@@ -104,23 +104,14 @@ std::vector<Token> Tokenize(const std::string& input) {
     while (pos < size) {
         const auto symbol = static_cast<unsigned char>(input[pos]);
         if (std::isspace(symbol)) {
-            std::cout << "space found" << std::endl;
             ++pos;
         } else if (std::isdigit(symbol)) {
-            std::cout << "digit found" << std::endl;
             tokens.emplace_back(ParseNumber(input, pos));
-
         } else if (auto it = kSymbol2Token.find(symbol); it != kSymbol2Token.end()) {
-            std::cout << "symbol found" << std::endl;
             tokens.emplace_back(it->second);
-
-        } else if (std::isalpha(symbol)){
-            std::cout << "words found" << std::endl;
-            tokens.emplace_back(ParseName(input, pos));
-
-        }
-        else{
             ++pos;
+        } else if (std::isalpha(symbol)){
+            tokens.emplace_back(ParseName(input, pos));
         }
 
     }
@@ -170,7 +161,7 @@ void PrintTokens(const std::vector<Token>& tokens) {
 
 int main(){
     std::string input = "(1 + 2) * 3 / 4 + 5 * (6 - 7) * sqrt(25) - abs(12-3)";
-    std::cout << input << std::endl;
+    std::cout <<"input string: " << input << std::endl;
     std::vector<Token> tokens = Tokenize(input);
     std::cout << "tokenizing done" << std::endl;
     PrintTokens(tokens);
