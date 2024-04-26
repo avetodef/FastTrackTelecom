@@ -169,7 +169,7 @@ void PrintTokens(const std::vector<Token>& tokens) {
     std::cout << std::endl;
 }
 
-int main(){
+int ma(){
     //testing with nonsensical input along with normal input
     std::string input = "(1 + 2) * 3 / 4 + 5 * (6 - 7) * sqrt(25) - abs(12-3) % 3 + min(1;aaaa;;;1) absabsdafe";
     std::cout <<"input string: " << input << std::endl;
