@@ -6,7 +6,7 @@
 //на первый элемент и с помощью арифметики указателей вывести 4 элемент массива.
 #include <iostream>
 
-int main(){
+int ptrTask(){
     int myArray[10] = {1,2,3,4,5,6,7,8,9,10};
     int *ptr = myArray;
     int* ptr4 = ptr+3;
