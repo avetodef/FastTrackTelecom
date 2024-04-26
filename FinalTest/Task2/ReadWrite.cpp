@@ -27,7 +27,7 @@ void writeValue(int v) {
     mutex.unlock();
 }
 
-int main() {
+int readwrite() {
     int read1;
     std::thread readThread(readValue, std::ref(read1));
     std::thread writeThread(writeValue, 1);

@@ -85,6 +85,18 @@ build CMakeFiles/FastTrackTelecom.dir/FinalTest/Task2/ReadWrite.cpp.obj: CXX_COM
   OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
   OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir\FinalTest\Task2
 
+build CMakeFiles/FastTrackTelecom.dir/FinalTest/Task3/tcpserver.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/FinalTest/Task3/tcpserver.cpp || cmake_object_order_depends_target_FastTrackTelecom
+  DEP_FILE = CMakeFiles\FastTrackTelecom.dir\FinalTest\Task3\tcpserver.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
+  OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir\FinalTest\Task3
+
+build CMakeFiles/FastTrackTelecom.dir/FinalTest/Task3/client.cpp.obj: CXX_COMPILER__FastTrackTelecom_Debug D$:/FastTrackTelecom/FinalTest/Task3/client.cpp || cmake_object_order_depends_target_FastTrackTelecom
+  DEP_FILE = CMakeFiles\FastTrackTelecom.dir\FinalTest\Task3\client.cpp.obj.d
+  FLAGS = -g -std=gnu++20
+  OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
+  OBJECT_FILE_DIR = CMakeFiles\FastTrackTelecom.dir\FinalTest\Task3
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target FastTrackTelecom
@@ -93,7 +105,7 @@ build CMakeFiles/FastTrackTelecom.dir/FinalTest/Task2/ReadWrite.cpp.obj: CXX_COM
 #############################################
 # Link the executable FastTrackTelecom.exe
 
-build FastTrackTelecom.exe: CXX_EXECUTABLE_LINKER__FastTrackTelecom_Debug CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/linkedList.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/task2_2_main.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_1/main.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task4/ptrTask.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task1/DBMS.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task2/ReadWrite.cpp.obj
+build FastTrackTelecom.exe: CXX_EXECUTABLE_LINKER__FastTrackTelecom_Debug CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/linkedList.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_2/task2_2_main.cpp.obj CMakeFiles/FastTrackTelecom.dir/FastTrackTask2_1/main.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task4/ptrTask.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task1/DBMS.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task2/ReadWrite.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task3/tcpserver.cpp.obj CMakeFiles/FastTrackTelecom.dir/FinalTest/Task3/client.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\FastTrackTelecom.dir
