@@ -7,6 +7,6 @@ add_executable(FastTrackTelecom
         FastTrackTask2_2/linkedList.cpp
         FastTrackTask2_2/linkedList.h
         FastTrackTask2_2/task2_2_main.cpp
-        FastTrackTask2_1/main.cpp FinalTest/Task4/main.cpp)
+        FastTrackTask2_1/main.cpp FinalTest/Task4/ptrTask.cpp FinalTest/Task2/DBMS.cpp)
 
 
